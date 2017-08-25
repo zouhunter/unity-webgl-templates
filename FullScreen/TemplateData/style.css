@@ -1,0 +1,24 @@
+
+/****************************************
+  ==== RESETS
+****************************************/
+body {
+		overflow: hidden;
+		background-image:url(watting.gif);
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+	*{
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	canvas {
+		position: absolute;
+	}
+	.LoadingText {
+		text-align: center;
+		font-size: 88px;
+		font-family: Calibri;
+	}
