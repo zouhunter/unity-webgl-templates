@@ -35,15 +35,15 @@
  <body style="background-color: white; padding: 0 0; margin: 0 0;;height:100%; width: 100%;">
 
     <img id="mytips" class="imghide" src="TemplateData/nonsupport.png"/>
-    <div class="webgl-content" id="mywebgl" style="display: none;">
-        <div id="gameContainer" style="background-color: white;"></div>
+   <div class="webgl-content" id="mywebgl" style="display: none;overflow: hidden;">
+        <div id="gameContainer" style="background-color: white;overflow: hidden;"></div>
     </div>
 
     <script type="text/javascript">
         $(function () {
 		
-		    wwidth = $(window).width();
-            wheight = $(window).height();
+		    wwidth = $(window).innerWidth();
+            wheight = $(window).innerHeight();
 		
             isIE = bro();
             if (isIE) {
@@ -64,8 +64,9 @@
 				
 				   $(window).resize(function () {
                     
-                    wwidth = $(window).width();
-                    wheight = $(window).height();
+                    wwidth = $(window).innerWidth();
+                    wheight = $(window).innerHeight();
+					
                     $("#gameContainer").css({ "width": wwidth + "px", "height": wheight + "px", "max-height": "100%", "position": "absolute","z-index": -1, "left": 0, "top": 0 });
 					 $("canvas").css({ "width": wwidth + "px", "height": wheight + "px", "max-height": "100%" });
 
